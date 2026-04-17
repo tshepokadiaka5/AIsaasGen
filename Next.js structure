@@ -1,0 +1,5 @@
+my-app/
+ ├── package.json
+ ├── pages/ OR app/
+ ├── public/
+ ├── next.config.js (optional)
