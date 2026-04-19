@@ -1,0 +1,5 @@
+mkdir aicareerlink && cd aicareerlink
+# paste files
+git init
+git push
+vercel --prod
