@@ -1,0 +1,13 @@
+/app
+  /api
+  /dashboard
+  /pricing
+  /sign-in
+  layout.tsx
+  page.tsx
+
+/components
+/lib
+/hooks
+/public
+/styles
