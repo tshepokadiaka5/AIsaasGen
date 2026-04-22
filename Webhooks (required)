@@ -1,0 +1,10 @@
+// /app/api/webhook/route.ts
+export async function POST(req: Request) {
+  const body = await req.text();
+  const sig = req.headers.get("stripe-signature")!;
+
+  // verify event
+  // update DB
+
+  return new Response("ok");
+}
