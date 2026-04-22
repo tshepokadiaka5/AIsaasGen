@@ -1,0 +1,25 @@
+export async function generateCV(input: string) {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env."sk-proj-kH3e4Yeft2AwGKAKfo4jvtQWzhKE77owgerJmSF1OkEHKKr9ko4Zw4iAJrsCaZscxduKHnx-IHT3BlbkFJwGDxL2iB5LMXl-uW9PotgiU0RUrqKYv0Oczb_JZW9OSXCxX5uWkQXLSQV2OllnaKnEpDRc5~ $}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: "You are a professional CV optimizer",
+        },
+        {
+          role: "user",
+          content: input,
+        },
+      ],
+    }),
+  });
+
+  const data = await res.json();
+  return data.choices[0].message.content;
+}
