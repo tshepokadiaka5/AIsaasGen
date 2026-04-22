@@ -1,0 +1,1 @@
+const HeavyComponent = dynamic(() => import("./Heavy"), { ssr: false });
